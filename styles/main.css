@@ -1,0 +1,205 @@
+/* ===================== FONT + RESET ===================== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f2;  /* dark background */
+    scroll-behavior: smooth;
+    color: #1a1a1a;  /* default text white */
+}
+
+/* ===================== TOP NAV ===================== */
+.topnav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    padding: 1rem 2rem !important;
+    font-family: "Montserrat", sans-serif !important;
+    border-bottom: 3px solid #E41E26;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Container for consistent max-width alignment */
+.topnav .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo / brand */
+.topnav .nav-left {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    display: flex !important;
+    letter-spacing: -0.5px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.topnav .nav-left:hover {
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Center nav links */
+.topnav .nav-center {
+    display: flex !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+}
+
+.topnav .nav-center a,
+.topnav .nav-right a {
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1.2rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+/* Hover effect */
+.topnav .nav-center a:hover,
+.topnav .nav-right a:hover {
+    background-color: rgba(226, 0, 26, 0.9) !important; /* deep red */
+    color: #ffffff !important;                          /* white text */
+    box-shadow: 0 4px 12px #ffffff !important; /* red glow */
+    transform: translateY(-2px);                        /* lift effect */
+    transition: all 0.3s ease !important;               /* smooth transition */
+}
+
+
+/* Right-side buttons */
+.topnav .nav-right a {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    margin-left: 0.8rem !important;
+}
+
+.topnav .nav-right a:hover {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Active link styling - unchanged */
+.topnav .nav-center a.active {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(226, 0, 26, 0.3) !important;
+    border-bottom: 3px solid #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 15px 20px !important;
+    }
+
+    .topnav .nav-center {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .topnav .nav-right {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .topnav .nav-right a {
+        margin-left: 0 !important;
+    }
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4px;
+    border-top: 3px solid #E41E26;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+
+.team-name {
+    color: #E41E26;
+    font-weight: 600;
+}
+
+/* =========================================================
+   CARD + RESPONSE-META RESPONSIVE
+========================================================= */
+
+/* Default (large screens: PC / laptop) */
+.card .response-meta p {
+    font-size: 1.5625rem; /* 25px */
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+.card .response-meta strong {
+    font-weight: 600;
+    color: #e2001a;
+}
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+    .card .response-meta p {
+        font-size: 1.375rem; /* ~22px */
+    }
+}
+
+/* Tablets / iPad */
+@media (max-width: 992px) {
+    .card .response-meta p {
+        font-size: 1.25rem; /* ~20px */
+    }
+}
+
+/* Mobile phones (portrait) */
+@media (max-width: 768px) {
+    .cover-container { height: 300px; }
+    .card-container { transform: translateY(-60px); grid-template-columns: 1fr; padding: 0 20px; }
+    .btn-group { grid-template-columns: 1fr; padding: 0 20px; }
+
+    .card .response-meta p {
+        font-size: 1.125rem; /* ~18px */
+    }
+
+    .response-answers {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small phones (iPhone SE, small Android) */
+@media (max-width: 480px) {
+    .card .response-meta p {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* Optional: scale <strong> proportionally on smaller screens */
+@media (max-width: 768px) {
+    .card .response-meta strong {
+        font-size: 1.125rem; /* ~18px bold */
+    }
+}
+
+@media (max-width: 480px) {
+    .card .response-meta strong {
+        font-size: 1rem; /* 16px bold */
+    }
+}

@@ -1,0 +1,530 @@
+/* FONT + RESET */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+.body-create-survey {
+  background-color: #FFFFFF;
+  padding-bottom: 10%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.conflict-page #addStudentForm {
+  display: none !important;
+}
+
+.text-box-view {
+  width: 52vw;
+  /* you can reduce to 50% or adjust as needed */
+  max-width: 700px;
+  /* optional: prevent it from getting too wide on large screens */
+  margin: 40px auto;
+  /* centers horizontally and adds some top/bottom spacing */
+  background-color: #E01A22;
+  border-radius: 12px;
+  padding: 1.5vw 2vw;
+  /* add some horizontal padding */
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-title-view {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+
+.cs-container {
+  width: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.form-container {
+  width: 53vw;
+  border-radius: 12px;
+  background: #FFFFFF;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #000000;
+}
+
+input[type="text"],
+select,
+textarea {
+  margin-top: 6px;
+}
+
+select {
+  color: #000000;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  /* Bootstrap danger red */
+  background-color: #fff5f5;
+}
+
+/* Section Creator Panel */
+.section-create-panel {
+  background: #f8f9fa;
+  border-left: 5px solid #0d6efd;
+}
+
+/* Question Builder */
+.question-builder {
+  background: #fdfdfd;
+  border-left: 5px solid #198754;
+}
+
+/* Each Question Box */
+.question-box {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+}
+
+/* Options Box */
+.options-box {
+  background: #f4f8ff;
+  border: 1px solid #d4e3ff;
+}
+
+/* Option row compact */
+.option-row .option-input {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
+
+/* Reduce vertical spacing between options */
+.option-row {
+  margin-bottom: 6px !important;
+}
+
+/* Preview Section Styles */
+.survey-preview .form-check {
+  margin-bottom: 4px;
+}
+
+.survey-preview select,
+.survey-preview input,
+.survey-preview textarea {
+  margin-top: 4px;
+}
+
+/* Reduce spacing between preview questions */
+.question-item {
+  padding-bottom: 8px;
+  margin-bottom: 10px !important;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.question-text-editor * {
+  pointer-events: auto !important;
+}
+
+.question-text-editor {
+  pointer-events: auto !important;
+}
+
+.inline-error {
+  border: 2px solid #dc3545 !important;
+  border-radius: 6px;
+}
+
+.option-error {
+  border: 1px solid #dc3545 !important;
+}
+
+.linear-scale-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.linear-scale-display .scale-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inline-editor .form-select {
+  min-width: 120px;
+}
+
+.question-box .form-select-sm,
+.inline-editor .form-select-sm {
+  max-width: 80px;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  height: auto;
+  padding-right: 1.5rem;
+}
+
+.linear-scale-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Grid for labels */
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+/* Push labels to start/end */
+.scale-labels span:first-child {
+  justify-self: start;
+}
+
+.scale-labels span:last-child {
+  justify-self: end;
+}
+
+/* Grid for radios */
+.linear-scale-display {
+  .linear-scale-display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.scale-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scale-number {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Move to Section dropdown */
+.move-section-dropdown {
+  max-width: 250px;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+/* Button group spacing */
+.question-item .btn-group button {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+/* Optional: make delete button slightly standout */
+.question-item .btn-group .btn-danger {
+  margin-left: 0.5rem;
+}
+
+/* Description Editor Styles */
+.description-editor {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.description-editor .ql-editor {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.description-editor .ql-toolbar {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.description-editor .ql-container {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  min-height: 100px;
+}
+
+/* Survey Description Preview */
+.survey-description-preview {
+  border-left: 4px solid #007bff;
+  margin-right: 3px;
+}
+
+.survey-description-preview p:last-child {
+  margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-add, .btn-publish, .btn-manage {
+  background-color: #E01A22;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add:hover, .btn-publish:hover, .btn-manage:hover {
+  background-color: #B0151A;
+  transform: scale(1.05);
+}
+
+.btn-delete {
+  background-color: #6D6E71;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* Modal Buttons */
+.btn-cancel {
+  background-color: #6D6E71;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-right: 10px;
+}
+
+.btn-cancel:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+.btn-save {
+  background-color: #E01A22;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-save:hover {
+  background-color: #B0151A;
+  transform: scale(1.05);
+}
+
+/* Animations */
+.body-create-survey {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Multi-select dropdown styling */
+select[multiple] {
+  min-height: 120px;
+  padding: 8px;
+}
+
+select[multiple] option {
+  padding: 6px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+
+select[multiple] option:checked {
+  background-color: #E01A22;
+  color: white;
+}
+
+/* Required question indicator */
+.question-required-restriction {
+  border-left: 4px solid #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.05) !important;
+}
+
+.question-required-restriction .form-label::after {
+  content: " (Required for verification)";
+  color: #dc3545;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+/* Disabled required checkbox */
+.required-checkbox-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* Disable all buttons during processing */
+.processing .btn {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes questionSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

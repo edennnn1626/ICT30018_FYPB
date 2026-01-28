@@ -1,0 +1,172 @@
+/* FONT + RESET */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f2; /* dark grey */
+    color: #1a1a1a;  
+    scroll-behavior: smooth;
+}
+
+/* FOOTER */
+.site-footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 3px solid #E41E26;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.team-name {
+    font-style: italic;
+    color: #F2F2F2;
+}
+
+/* Center card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff; 
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 500px;
+    animation: slideUp 1s ease forwards;
+}
+
+/* Form Title */
+.card-title {
+    text-align: center;
+    color: #E41E26;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Form Layout */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Label Styling */
+.login-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: #F2F2F2;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Input Styling */
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    color: #000000;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus */
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+    border-color: #E41E26;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #E41E26;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1rem;
+    white-space: nowrap;
+}
+
+/* Add margin between side-by-side buttons */
+.d-flex .btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background-color: #b51219; 
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    color: #E41E26; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffffff; 
+}
+
+/* Image Logo */
+img.img-fluid {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Form checkboxes and labels */
+.form-check-label {
+    color: #000000;  
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(1.05); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popUp {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}

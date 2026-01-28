@@ -1,0 +1,166 @@
+/* Reset + Font */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f8fa;
+    scroll-behavior: smooth;
+    color: #1a1a1a;
+}
+
+/* Form Container */
+.form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 5% auto;
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(228, 30, 38, 0.05);
+    animation: slideFade 0.7s ease-in-out;
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    color: #E41E26;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Section Headers */
+.section-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+/* Form Layout */
+.survey-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Label Styling */
+.survey-form label {
+    display: block;
+    color: #333333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Inputs, Selects, Textarea */
+.survey-form input,
+.survey-form select,
+.survey-form textarea {
+  width: 100%;
+  max-width: 570px; 
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus */
+.survey-form input:focus,
+.survey-form select:focus,
+.survey-form textarea:focus {
+  border-color: #E41E26;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(228, 30, 38, 0.2);
+  outline: none;
+}
+
+/* Textarea */
+.survey-form textarea { resize: vertical; }
+
+/* Labels */
+.survey-form label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 0.4rem;
+}
+
+/* Button */
+.survey-form button {
+  display: block;  
+  margin: 2rem auto 0; 
+  width: 100%;
+  max-width: 500px; 
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #E41E26 0%, #c01820 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s;
+}
+
+.survey-form button:hover {
+  background-color: #c01820;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(228, 30, 38, 0.3);
+}
+
+/* Animations */
+@keyframes slideFade {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 3px solid #E41E26;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+
+.team-name {
+    color: #E41E26;
+    font-weight: 600;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E41E26 0%, #b91c1c 100%);
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(228, 30, 38, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 30px rgba(228, 30, 38, 0.5);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .form-container { padding: 2rem 1.5rem; }
+  .survey-form button { font-size: 16px; padding: 12px; }
+}

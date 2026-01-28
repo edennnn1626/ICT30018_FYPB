@@ -1,0 +1,736 @@
+/* ===== PROFESSIONAL SURVEY VIEW STYLES ===== */
+:root {
+	--primary-red: #E41E26;
+	--primary-dark: #2C2C2C;
+	--primary-light: #FFFFFF;
+	--accent-gray: #F8F9FA;
+	--border-light: #E0E0E0;
+	--text-primary: #2C2C2C;
+	--text-secondary: #6C757D;
+	--shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
+	--shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Body & Wrapper */
+body {
+	background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+	color: var(--text-primary);
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.7;
+	min-height: 100vh;
+}
+
+.body-view-survey {
+	padding: 1% 0 6% 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-height: calc(100vh - 100px);
+}
+
+/* Main Form Container */
+.form-wrapper {
+	background-color: var(--primary-light);
+	padding: 3rem;
+	border-radius: 16px;
+	max-width: 900px;
+	width: 95%;
+	margin: 1rem auto;
+	border: 1px solid var(--border-light);
+	box-shadow: var(--shadow-medium);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-wrapper:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Section */
+.text-title-view {
+	margin: 0 0 0rem;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--primary-red);
+	letter-spacing: -0.5px;
+	border-bottom: 3px solid var(--accent-gray);
+	padding-bottom: 1.5rem;
+	position: relative;
+}
+
+.text-title-view::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 3px;
+	background: var(--primary-red);
+	border-radius: 2px;
+}
+
+/* Survey Description */
+.survey-description {
+	background: var(--accent-gray);
+	border-left: 4px solid var(--primary-red);
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text-secondary);
+}
+
+/* ===== TOP ACTION BUTTONS ===== */
+.top-action-buttons {
+	margin-bottom: 2.5rem;
+}
+
+.top-action-buttons .btn {
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	min-width: 140px;
+}
+
+.top-action-buttons .btn-secondary {
+	background: var(--accent-gray);
+	color: var(--text-primary);
+	border: 1px solid var(--border-light);
+}
+
+.top-action-buttons .btn-secondary:hover {
+	background: #e9ecef;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.top-action-buttons .btn-primary {
+	background: linear-gradient(135deg, var(--primary-red) 0%, #b5171d 100%);
+	color: var(--primary-light);
+	box-shadow: 0 4px 15px rgba(228, 30, 38, 0.3);
+}
+
+.top-action-buttons .btn-primary:hover {
+	background: linear-gradient(135deg, #b5171d 0%, #8a1217 100%);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(228, 30, 38, 0.4);
+}
+
+/* ===== SECTION NAVIGATION ===== */
+.section-navigation {
+	background: var(--primary-light);
+	border: 1px solid var(--border-light);
+	border-radius: 12px;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+	box-shadow: var(--shadow-light);
+}
+
+.section-navigation .btn,
+.submit-response-btn {
+	padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-light);
+    background: linear-gradient(135deg, var(--primary-red) 0%, #b5171d 100%);
+    box-shadow: 0 4px 12px rgba(228, 30, 38, 0.3);
+}
+
+.section-navigation .btn-outline-primary {
+    background: transparent;
+    color: var(--primary-red);
+}
+
+.section-navigation .btn:hover:not(:disabled) {
+	background: var(--primary-red);
+	color: var(--primary-light);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(228, 30, 38, 0.3);
+}
+
+.section-navigation .btn:disabled {
+	border-color: var(--border-light);
+    color: var(--text-secondary);
+    background: var(--accent-gray);
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.section-navigation .btn-primary:hover:not(:disabled),
+.submit-response-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #b5171d 0%, #8a1217 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(228, 30, 38, 0.4);
+}
+
+/* Submit response button specific styling */
+#submitButtonContainer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Center submit button for single-section surveys */
+#submitButtonContainer {
+	display: none;
+	/* Hidden by default for multi-section */
+}
+
+#submitButtonContainer.justify-content-center {
+	display: flex !important;
+	justify-content: center;
+}
+
+/* Ensure the button has proper styling */
+#submitButtonContainer .btn-primary {
+	min-width: 200px;
+	padding: 12px 24px;
+	font-size: 1.1rem;
+}
+
+/* Make sure navigation buttons have consistent size */
+.section-navigation .d-flex {
+    gap: 1rem;
+}
+
+.section-info {
+	min-width: 220px;
+	padding: 0 1rem;
+}
+
+#currentSectionTitle {
+	color: var(--text-primary);
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.section-counter {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+	background: linear-gradient(135deg, #E41E26 0%, #8a1217 100%);
+	border: none;
+	border-radius: 12px;
+	margin-bottom: 2rem;
+	padding: 1.75rem 2rem;
+	box-shadow: 0 6px 20px rgba(228, 30, 38, 0.25);
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.section-header::before {
+	display: none;
+}
+
+.section-header h3 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--primary-light);
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	letter-spacing: 0.5px;
+}
+
+.section-header::after {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 100%;
+	height: 200%;
+	background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+	transform: rotate(30deg);
+}
+
+/* ===== REQUIRED FIELD STYLING ===== */
+/* Asterisk only appears on main question label via PHP-generated span */
+.required-asterisk {
+    color: #dc3545 !important;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* IMPORTANT: Remove ALL asterisk generation via CSS */
+label::after,
+.form-check-label::after,
+.scale-option label::after,
+.form-label::after {
+    content: none !important;
+}
+
+/* Specifically target any CSS that might be adding asterisks */
+[required] + label::after,
+.required + label::after,
+.form-check-input[required] + label::after {
+    content: none !important;
+}
+
+/* Make sure Bootstrap isn't adding asterisks */
+.was-validated .form-control:invalid ~ .invalid-feedback::before,
+.was-validated .form-check-input:invalid ~ .invalid-feedback::before {
+    content: none !important;
+}
+
+/* Question Container */
+.vs-container {
+	width: 100%;
+	margin-bottom: 2rem;
+	box-sizing: border-box;
+}
+
+.question-block {
+	background-color: var(--primary-light);
+	padding: 1rem 1rem;
+}
+
+.question-block label {
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	display: block;
+	line-height: 1.6;
+}
+
+/* Question Number Styling */
+.question-counter {
+	color: var(--text-primary);
+	font-weight: 700;
+	margin-right: 8px;
+}
+
+/* ===== UPDATED RADIO & CHECKBOX STYLING ===== */
+.form-check {
+	margin-bottom: 0.75rem;
+	padding-left: 0;
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	/* Added gap between input and label */
+}
+
+.form-check-input {
+	margin-top: 0.25rem;
+	/* Align with text better */
+	margin-right: 0;
+	cursor: pointer;
+	border: 2px solid #ced4da;
+	width: 1.1em;
+	height: 1.1em;
+	flex-shrink: 0;
+}
+
+/* Radio button validation styling */
+.form-check-input.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.form-check-input.is-invalid ~ .form-check-label {
+    color: #dc3545 !important;
+}
+
+/* When radio is checked, remove invalid styling */
+.form-check-input:checked.is-invalid {
+    border-color: #dc3545 !important;
+    background-color: #dc3545 !important;
+}
+
+.form-check-input:checked.is-invalid ~ .form-check-label {
+    color: #dc3545 !important;
+}
+
+/* Normal checked state should override invalid */
+.form-check-input:checked:not(.is-invalid) {
+    border-color: var(--primary-red) !important;
+    background-color: var(--primary-red) !important;
+}
+
+/* Smaller radio buttons */
+.form-check-input[type="radio"] {
+	width: 1em;
+	height: 1em;
+	margin-top: 0.3rem;
+}
+
+/* Smaller checkbox */
+.form-check-input[type="checkbox"] {
+	width: 1.1em;
+	height: 1.1em;
+	margin-top: 0.25rem;
+}
+
+.form-check-input:checked {
+	background-color: var(--primary-red);
+	border-color: var(--primary-red);
+}
+
+.form-check-label {
+	font-size: 1rem;
+	color: var(--text-primary);
+	cursor: pointer;
+	margin-left: 0;
+	line-height: 1.5;
+	padding-top: 0.1rem;
+	/* Better text alignment */
+}
+
+/* Options Container */
+.options-container {
+    margin-left: 0 !important; /* Remove default left margin */
+    padding-left: 0 !important;
+}
+
+/* Radio and checkbox options alignment */
+.radio-options,
+.checkbox-options {
+    margin-top: 0.75rem;
+}
+
+/* Linear scale alignment */
+.linear-scale-container {
+    margin-top: 1rem;
+    margin-left: 0;
+}
+
+/* Remove any indentation for options */
+.question-content .ms-3 {
+    margin-left: 0 !important;
+}
+
+/* Linear Scale Styling */
+.linear-scale-container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1.5rem 0;
+}
+
+.scale-labels {
+	margin-bottom: 1rem;
+}
+
+.scale-labels small {
+	font-weight: 500;
+	color: var(--text-secondary);
+}
+
+.scale-options {
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.scale-option {
+	flex: 1;
+	text-align: center;
+	padding: 0.5rem;
+}
+
+.scale-option input[type="radio"] {
+	transform: scale(1.4);
+	margin-bottom: 0.75rem;
+	cursor: pointer;
+}
+
+.scale-option label {
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+	cursor: pointer;
+	margin: 0;
+}
+
+/* ===== SURVEY BUTTON ===== */
+.btn-review {
+	background: var(--accent-gray) !important;
+	color: var(--text-secondary) !important;
+	border: 2px solid var(--border-light) !important;
+	cursor: not-allowed !important;
+	opacity: 0.7 !important;
+}
+
+.btn-review:hover {
+	transform: none !important;
+	box-shadow: none !important;
+	background: var(--accent-gray) !important;
+	color: var(--text-secondary) !important;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+	border: 2px solid var(--border-light);
+	border-radius: 8px;
+	padding: 0.875rem 1rem;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+	background-color: var(--primary-light);
+}
+
+.form-control:focus,
+.form-select:focus {
+	border-color: var(--primary-red);
+	box-shadow: 0 0 0 3px rgba(228, 30, 38, 0.1);
+	background-color: var(--primary-light);
+}
+
+/* For single-section surveys, you might want more spacing */
+.survey-section:only-of-type {
+	margin-bottom: 2rem;
+}
+
+/* Section Transitions */
+.survey-section {
+	display: none;
+	animation: slideIn 0.4s ease-out;
+}
+
+.survey-section.active {
+	display: block;
+}
+
+/* Animations */
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(228, 30, 38, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.body-view-survey {
+		padding: 0.5% 0 5% 0;
+	}
+
+	.form-wrapper {
+		padding: 2rem 1.5rem;
+		width: 98%;
+		margin: 0.5rem auto;
+		max-width: 95vw;
+	}
+
+	.text-title-view {
+		font-size: 2rem;
+		margin-bottom: 0rem;
+	}
+
+	.top-action-buttons {
+		margin-bottom: 2rem;
+	}
+
+	.section-navigation {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-navigation .btn,
+	.submit-response-btn {
+		padding: 10px 20px;
+        font-size: 1rem;
+        min-width: 150px;
+	}
+
+	.section-navigation .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+	.section-info {
+		min-width: 180px;
+	}
+
+	#currentSectionTitle {
+		font-size: 1.1rem;
+	}
+
+	.section-header {
+		padding: 1.5rem 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-header h3 {
+		font-size: 1.3rem;
+	}
+
+	.question-block {
+		padding: 1.5rem;
+	}
+
+	.form-check {
+		gap: 0.5rem;
+	}
+
+	.form-check-input {
+		width: 1em;
+		height: 1em;
+	}
+
+	.form-check-input[type="radio"] {
+		width: 0.9em;
+		height: 0.9em;
+	}
+
+	.linear-scale-container {
+		max-width: 100%;
+		padding: 1rem 0;
+	}
+
+	.scale-options {
+		gap: 0.5rem;
+	}
+
+	.scale-option input[type="radio"] {
+		transform: scale(1.2);
+	}
+}
+
+@media (max-width: 576px) {
+	.body-view-survey {
+		padding: 0 0 4% 0;
+	}
+
+	.form-wrapper {
+		padding: 1.5rem 1rem;
+		border-radius: 12px;
+		width: 99%;
+		margin: 0.25rem auto;
+	}
+
+	.text-title-view {
+		font-size: 0rem;
+	}
+
+	.top-action-buttons .d-flex {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.section-navigation .d-flex {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.section-info {
+		order: -1;
+	}
+
+	.section-header {
+		padding: 1.25rem 1rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.section-header h3 {
+		font-size: 1.2rem;
+	}
+
+	.question-block {
+		padding: 1.25rem;
+	}
+
+	.form-check {
+		gap: 0.5rem;
+	}
+
+	.form-check-input {
+		width: 0.9em;
+		height: 0.9em;
+	}
+
+	.form-check-input[type="radio"] {
+		width: 0.8em;
+		height: 0.8em;
+	}
+
+	.scale-options {
+		gap: 0.25rem;
+	}
+
+	.scale-option input[type="radio"] {
+		transform: scale(1.1);
+	}
+}
+
+/* For very large screens */
+@media (min-width: 1200px) {
+	.form-wrapper {
+		max-width: 1000px;
+	}
+
+	.body-view-survey {
+		padding: 2% 0 8% 0;
+	}
+}
+
+/* Utility Classes */
+.text-muted {
+	color: var(--text-secondary) !important;
+}
+
+.bg-light {
+	background-color: var(--accent-gray) !important;
+}
+
+/* Print Styles */
+@media print {
+
+	.top-action-buttons,
+	.section-navigation {
+		display: none;
+	}
+
+	.survey-section {
+		display: block !important;
+	}
+
+	.form-wrapper {
+		box-shadow: none;
+		border: 1px solid #000;
+	}
+
+	.section-header {
+		background: #f0f0f0 !important;
+		color: #000 !important;
+	}
+
+	.section-header h3 {
+		color: #000 !important;
+	}
+}
