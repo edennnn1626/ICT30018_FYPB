@@ -1,0 +1,20 @@
+name,student_id,program,graduation_date,mobile_no,email,personal_email,LinkedIn,Company
+Aisha Rahman,101301234,Bachelor of Business,2018-10-15,01190001234,101301234@students.swinburne.edu.my,101301234personal@gmail.com,linkedin.com/in/aisharahman,Global Ventures
+Rajesh Kumar,102412345,Bachelor of Computer Science,2022-04-15,01234000123,102412345@students.swinburne.edu.my,102412345personal@gmail.com,linkedin.com/in/rajeshkumar,Tech Innovations
+Hans Schmidt,102512346,Bachelor of Cybersecurity,2023-10-15,01198765432,102512346@students.swinburne.edu.my,102512346personal@gmail.com,linkedin.com/in/hansschmidt,GermanTech
+Siti Nurhidayah,101312347,Bachelor of Data Science,2018-04-15,01123498765,101312347@students.swinburne.edu.my,101312347personal@gmail.com,,Data Insights
+Korean Min-Joon,102612348,Bachelor of Design,2022-10-15,01176543210,102612348@students.swinburne.edu.my,102612348personal@gmail.com,linkedin.com/in/minjoon,Creative Studio
+Joseph Wilson,101323349,Bachelor of Engineering,2018-10-15,01167890123,101323349@students.swinburne.edu.my,101323349personal@gmail.com,linkedin.com/in/josephwilson,BuildRight Ltd
+Noraini Binti Ali,102712350,Bachelor of Nursing,2023-04-15,01112349876,102712350@students.swinburne.edu.my,102712350personal@gmail.com,,Health First
+Aiden O'Connor,101334351,Bachelor of Psychology,2018-04-15,01134567890,101334351@students.swinburne.edu.my,101334351personal@gmail.com,linkedin.com/in/aidenoconnor,PsychWell
+Benny Anak Jala,102812352,Bachelor of Software Engineering,2023-10-15,01145678901,102812352@students.swinburne.edu.my,102812352personal@gmail.com,,SarawakTech
+Fatimah Zainal,101345353,Bachelor of Business,2018-10-15,01156789012,101345353@students.swinburne.edu.my,101345353personal@gmail.com,linkedin.com/in/fatimahzainal,Finance Corp
+Rajiv Singh,102912354,Bachelor of Computer Science,2022-04-15,01123456789,102912354@students.swinburne.edu.my,102912354personal@gmail.com,,InfoTech
+Liyana Ahmad,101356355,Bachelor of Cybersecurity,2018-04-15,01134567891,101356355@students.swinburne.edu.my,101356355personal@gmail.com,linkedin.com/in/liyanaahmad,SecureNet
+Erik Johansson,102013456,Bachelor of Data Science,2023-10-15,01145678912,102013456@students.swinburne.edu.my,102013456personal@gmail.com,linkedin.com/in/erikjohansson,DataVision
+Sarina Binti Musa,101367357,Bachelor of Design,2018-10-15,01156789013,101367357@students.swinburne.edu.my,101367357personal@gmail.com,,Creative Minds
+David Park,102113458,Bachelor of Engineering,2022-04-15,01167890124,102113458@students.swinburne.edu.my,102113458personal@gmail.com,linkedin.com/in/davidpark,BuildCorp
+Nadia Salleh,101378359,Bachelor of Nursing,2018-04-15,01178901235,101378359@students.swinburne.edu.my,101378359personal@gmail.com,,HealthCare Plus
+Liam Murphy,102213459,Bachelor of Psychology,2023-10-15,01189012346,102213459@students.swinburne.edu.my,102213459personal@gmail.com,linkedin.com/in/liammurphy,MindWell
+Bujang Anak Kenyalang,101389360,Bachelor of Software Engineering,2018-10-15,01190123457,101389360@students.swinburne.edu.my,101389360personal@gmail.com,,Sarawak Software
+Anita Devi,102313460,Bachelor of Business,2022-04-15,01101234568,102313460@students.swinburne.edu.my,102313460personal@gmail.com,linkedin.com/in/anitadevi,BizConsult
